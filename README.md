@@ -7,11 +7,11 @@ Ce dépôt contient tout le nécessaire pour installer l'ensemble de containers 
      alt="stack"/>
 </div>
 
-Des variables sont postées en MQTT via la bibliothèque e!COCKPIT WagoAppCloud. Le broker MQTT (Mosquitto) est hébergé sur le contrôleur. 
-L'applicatif Telegraf est abonné au topic MQTT sur ce broker, et poste les données dans une base InfluxDB dans un container dédié.
-Enfin les données sont affichées via l'outil de visualisation Grafana. 
-Le client MQTT peut aussi bien être interne que distant. 
-L'outil de gestion de containers Portainer est également installé pour faciliter la maintenance des containers. 
+Des variables sont postées en MQTT via la bibliothèque e!COCKPIT WagoAppCloud. Le broker MQTT (Mosquitto) est hébergé sur le contrôleur. \
+L'applicatif Telegraf est abonné au topic MQTT sur ce broker, et poste les données dans une base InfluxDB dans un container dédié. \
+Enfin les données sont affichées via l'outil de visualisation Grafana.  \
+Le client MQTT peut aussi bien être interne que distant.  \
+L'outil de gestion de containers Portainer est également installé pour faciliter la maintenance des containers.
 
 Le script bash permet d'automatiser l'installation de Docker sur la carte SD, le téléchargement des images Docker, fichiers de configuration et package nécessaires et leurs installations.
 
@@ -90,12 +90,12 @@ docker logs c_telegraf
 
 ### 4) Grafana
 
-Se connecter à la page http://[adresseIPduContrôleur]:3000.
-S'authentifier via admin / admin. 
-Le mot de passe doit être modifié à la première connexion. 
-Aller dans <em>Configuration / Data sources</em> puis cliquer sur <em>Add data source</em>.
-Sélectionner InfluxDB.
-Au niveau de l'URL, renseigner http://c_influxdb:8086
-Au niveau de <em>Database</em>, renseigner telegraf. Cette base est créée automatiquement par Telegraf.
+Se connecter à la page http://[adresseIPduContrôleur]:3000.  \
+S'authentifier via admin / admin. \
+Le mot de passe doit être modifié à la première connexion.  \
+Aller dans <em>Configuration / Data sources</em> puis cliquer sur <em>Add data source</em>. \
+Sélectionner InfluxDB. \
+Au niveau de l'URL, renseigner http://c_influxdb:8086 \
+Au niveau de <em>Database</em>, renseigner telegraf. Cette base est créée automatiquement par Telegraf. \
 Cliquer sur <em>Save And Test</em>, <em>Data source is working</em> doit s'afficher en vert. 
 
