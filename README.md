@@ -99,3 +99,5 @@ Au niveau de l'URL, renseigner http://c_influxdb:8086 \
 Au niveau de <em>Database</em>, renseigner telegraf. Cette base est créée automatiquement par Telegraf. \
 Cliquer sur <em>Save And Test</em>, <em>Data source is working</em> doit s'afficher en vert. 
 
+## Evolution
+Le MQTT doit être sécurisé en mettant en place les certificats TLS. 
