@@ -36,7 +36,7 @@ Se connecter en SSH au contrôleur via PuTTy par exemple, en tant que super util
 Exécuter la commande suivante qui permet le téléchargement de ce script, lui donne les droits d'exécution et l'exécute.
 
 ```
-wget https://raw.githubusercontent.com/quenorha/mtig/main/install.sh -P /media/sd/ && chmod +x /media/sd/install.sh && /media/sd/install.sh
+wget https://raw.githubusercontent.com/quenorha/mtig/main/install.sh -O /media/sd/install.sh && chmod +x /media/sd/install.sh && /media/sd/install.sh
 ```
 
 ## Configuration
