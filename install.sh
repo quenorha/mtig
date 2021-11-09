@@ -33,19 +33,19 @@ if [ $? -eq 0 ]; then
 	sleep 3
 
 	echo "Téléchargement image Portainer"
-	docker pull portainer/portainer-ce:2.6.1
+	docker pull portainer/portainer-ce:latest
 
 	echo "Téléchargement image Mosquitto"
-	docker pull eclipse-mosquitto:2.0.11
+	docker pull eclipse-mosquitto:latest
 	
 	echo "Téléchargement image Influxdb"
 	docker pull influxdb:1.8.6
 	
 	echo "Téléchargement image Grafana"
-	docker pull grafana/grafana:8.0.0
+	docker pull grafana/grafana:latest
 	
 	echo "Téléchargement image Telegraf"
-	docker pull telegraf:1.19.1
+	docker pull telegraf:latest
 	
 	echo "Création network"
 	docker network create wago
