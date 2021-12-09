@@ -59,7 +59,7 @@ if [ $? -eq 0 ]; then
 	docker run -d -p 8000:8000 -p 9000:9000 --name=c_portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v v_portainer:/data portainer/portainer-ce:latest
 
 	echo "Démarrage Mosquitto"
-	docker run -d -p 1883:1883 -p 9001:9001 --restart=unless-stopped --name c_mosquitto -v /root/config/mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto:latest
+	docker run -d -p 1883:1883 -p 9001:9001 --restart=unless-stopped --net=wago --name c_mosquitto -v /root/config/mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto:latest
 
 	echo "Démarrage InfluxDB"
 	docker run -d -p 8086:8086 --name c_influxdb --net=wago --restart unless-stopped -v v_influxdb influxdb:1.8.6
